@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Responsive Nav-Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="#">Web Dev Creative</a></div>
+      <ul class="links">
+        <li><a href="hero">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+      <a href="# " class="action-btn">Get Started</a>
+      <div class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+
+      </div>
+
+    </div>
+
+    <div class="dropdown_menu ">
+      <li><a href="hero">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="# " class="action-btn">Get Started</a></li>
+    </div>
+  </header>
+
+<main>
+  <section id="hero">
+    <h1>Welcome</h1>
+    <p><blockquote>“Don't wait for opportunity, create it. The only way to do great work is to love what you do.Success is not final, failure is not fatal<br> it is the courage to continue that counts.Wake up with determination, go to bed with satisfaction.”</blockquote><br>
+    <cite>-William Shakespeare.</cite>
+    </p>
+
+  </section>
+</main>
+
+
+  <script>
+    const togglebtn = document.querySelector('.toggle-btn');
+    const togglebtnIcon = document.querySelector('.toggle-btn i');
+    const dropdownmenu = document.querySelector('.dropdown_menu');
+
+    togglebtn.onclick = function() {
+      dropdownmenu.classList.toggle('open')
+      const isopen = dropdownmenu.classList.contains('open')
+
+      togglebtnIcon.classList = isopen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+  </script>
+
+</body>
+
+</html>
